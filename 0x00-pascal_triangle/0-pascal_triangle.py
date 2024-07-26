@@ -9,7 +9,7 @@ Returns an empty list if n <= 0
 
 def pascal_triangle(n):
     """method definition"""
-    if n < 0:
+    if n <= 0:
         return []
 
     triangle = [[1]]
