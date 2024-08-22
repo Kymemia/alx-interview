@@ -13,6 +13,7 @@ def validUTF8(data):
     value = 0
     while value < len(data):
         byte = data[value]
+
         if byte < 0b10000000:
             value += 1
         elif byte < 0b11000000:
@@ -30,7 +31,7 @@ def validUTF8(data):
                 data[value + 2] < 0b10000000 or
                 data[value + 2] >= 0b11000000):
                 return False
-            value += 2
+            value += 3
         else:
             return False
 
