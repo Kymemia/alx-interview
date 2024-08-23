@@ -16,6 +16,7 @@ def validUTF8(data):
 
         if byte < 0b10000000:
             value += 1
+            continue
         elif byte < 0b11000000:
             return False
         elif byte < 0b11100000:
