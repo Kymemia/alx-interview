@@ -45,5 +45,4 @@ def validUTF8(data):
         else:
             return False
 
-        value += 1
     return True
