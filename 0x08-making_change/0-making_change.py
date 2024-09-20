@@ -16,8 +16,9 @@ def makeChange(coins, total):
     r = [float("infinity")] * (total + 1)
     r[0] = 0
 
-    for coin in coins:
-        for x in range(coin, total + 1):
-            r[x] = min(r[x], r[x - coin] + 1)
+    for x in range(1, total + 1):
+        for coin in coins:
+            if x >= coin:
+                r[x] = min(r[x], r[x - coin] + 1)
 
     return r[total] if r[total] != float("infinity") else - 1
