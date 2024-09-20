@@ -10,6 +10,9 @@ def makeChange(coins, total):
     """
     function that solves the coin change problem
     """
+    if total <= 0:
+        return 0
+
     r = [float("infinity")] * (total + 1)
     r[0] = 0
 
